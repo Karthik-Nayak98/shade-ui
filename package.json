@@ -1,0 +1,29 @@
+{
+  "name": "shade-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Karthik-Nayak98/shade-ui.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Karthik-Nayak98/shade-ui/issues"
+  },
+  "homepage": "https://github.com/Karthik-Nayak98/shade-ui#readme",
+  "devDependencies": {
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglifycss": "^1.1.0",
+    "prettier": "^2.7.1",
+    "sass": "^1.54.8"
+  }
+}
