@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "gulp": "gulp"
   },
   "repository": {
     "type": "git",
@@ -25,5 +25,8 @@
     "gulp-uglifycss": "^1.1.0",
     "prettier": "^2.7.1",
     "sass": "^1.54.8"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0"
   }
 }
