@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+  font-family: 'Inter', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: beige;
+}
+
+nav {
+  padding: 1rem;
+  background-color: #edc43e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: white;
+  text-transform: uppercase;
+}
+
+.navbar-items {
+  display: flex;
+  gap: 1rem;
+}
+li {
+  list-style: none;
+}
+
+i.fa-github,
+i.fa-twitter {
+  color: white;
+  font-size: 1.6rem;
+}
+
+main {
+  min-width: 75vw;
+  height: 65vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2.header {
+  color: rgb(65, 57, 57);
+  font-size: 3rem;
+}
+a.button {
+  padding: 0.8rem;
+  text-decoration: none;
+  border-radius: 4px;
+  margin: 0.6rem;
+  display: inline-block;
+  font-size: large;
+}
+
+a.installation__button {
+  background-color: #edc43e;
+  color: white;
+}
+a.installation__button:hover {
+  transition: background-color 0.2s ease;
+  opacity: 0.8;
+}
+a.documentation__button {
+  color: #edc43e;
+  border: 1.5px solid #edc43e;
+}
+a.documentation__button:hover {
+  background-color: #edc43e;
+  color: white;
+  transition: background-color 0.3s ease;
+}
