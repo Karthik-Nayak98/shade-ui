@@ -26,6 +26,10 @@ function minifyJS() {
     .pipe(dest('./documentation/prism'));
 }
 
+function minifyDocsJS() {
+  return src('./dist/*.js').pipe(minifyJs()).pipe(dest('./dist/'));
+}
+
 function minifyCSS() {
   return src('./documentation/prism/*.css')
     .pipe(
@@ -40,16 +44,18 @@ function watchTask() {
   watch(['./sass/**/*.scss'], buildCSS);
   watch(['./documentation/docs.scss'], buildDocs);
   watch(['./documentation/prism/*.js'], minifyJS);
+  watch(['./dist/docs.js'], minifyDocsJS);
   watch(['./documentation/prism/*.css'], minifyCSS);
 }
 
 exports.build = buildCSS;
 exports.buildDocs = buildDocs;
 exports.minifyCSS = minifyCSS;
+// exports.minifyDocsJS = minifyDocsJs;
 exports.minifyJS = minifyJS;
 exports.watch = watchTask;
 
 exports.default = series(
-  parallel(buildCSS, buildDocs, minifyCSS, minifyJS),
+  parallel(buildCSS, buildDocs, minifyCSS, minifyJS, minifyDocsJS),
   watchTask
 );
