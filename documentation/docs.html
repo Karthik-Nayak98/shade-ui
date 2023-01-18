@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
+
+    <link
+      rel="stylesheet"
+      crossorgin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./prism/prism.css" />
+    <link rel="stylesheet" href="../dist/main.css" />
+    <link rel="stylesheet" href="../dist/docs.css" />
+    <!-- <link rel="stylesheet" href="../dist/test.css" /> -->
+    <title>Documentation</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo__container">
+        <i class="hamburger fa fa-bars fa-lg"></i>
+        <i class="close hide fa fa-close fa-lg"></i>
+        <p class="logo">Shade UI</p>
+      </div>
+      <ul class="nav-items">
+        <li>
+          <a target="_blank" href="https://github.com/karthik-nayak98/shade-ui">
+            <i class="fa fa-github fa-lg"></i>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://twitter.com/karthiknayak98">
+            <i class="fa fa-twitter fa-lg"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main class="container">
+      <!-- Side Navbar Starts -->
+      <section class="doc-container">
+        <nav class="hide sidenav">
+          <h3 class="sidenav-heading">Getting Started</h3>
+          <ul>
+            <li>
+              <a href="#installation">Installation</a>
+            </li>
+          </ul>
+          <h3 class="sidenav-heading">Components</h3>
+          <ul>
+            <li>
+              <!-- <i class="fa fa-caret-down"></i> -->
+              <a href="#alerts">Alert</a>
+            </li>
+            <li>
+              <a href="#avatars">Avatar</a>
+            </li>
+            <li>
+              <a href="#buttons">Button</a>
+            </li>
+            <li class="list-dropdown">
+              <a href="#cards">Card</a>
+              <!-- <ul>
+                <li>
+                  <a href="#testimonial">testimonial</a>
+                </li>
+              </ul> -->
+            </li>
+            <li>
+              <a href="#images">Image</a>
+            </li>
+            <li>
+              <a href="#inputs">Input</a>
+            </li>
+            <li>
+              <a href="#dropdown">Dropdown</a>
+            </li>
+          </ul>
+          <h3 class="sidenav-heading">Utilities</h3>
+          <ul>
+            <li>
+              <a href="#colors">Color</a>
+            </li>
+            <li>
+              <a href="#typography">Typography</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- Side Navbar Ends -->
+        <article class="main-content">
+          <!-- Installation -->
+          <section id="installation">
+            <h2 class="component-header">Installation</h2>
+            <p class="component-description">
+              You can import the Shade UI component library in 2 ways.
+            </p>
+            <h3 class="component-subheader">Link in HTML</h3>
+            <p class="component-description">
+              Include the below link the head section of your HTML file.
+            </p>
+            <script
+              type="text/plain"
+              class="line-numbers language-html snippet-container">
+              <!-- CDN link to the component library -->
+              <link rel="stylesheet" href="" />
+            </script>
+            <h3 class="component-subheader">Import in CSS</h3>
+            <p class="component-description">
+              Include the below link in your main css file.
+            </p>
+            <script
+              type="text/plain"
+              class="line-numbers language-css snippet-container code-snippet">
+              /* CDN link to the component library */
+              @import url()
+            </script>
+          </section>
+          <!-- Alert -->
+          <section id="alerts">
+            <h2 class="component-header">Alerts</h2>
+            <p class="component-description">
+              Alerts are the simple message indicating that an event has
+              occurred, or they can be detailed with contextual information that
+              describes why the event happened or provide options for responding
+              to the exception.
+            </p>
+            <h3 class="component-subheader">Solid Alerts</h3>
+            <div class="component-container">
+              <div class="alert-group">
+                <div class="alert-success">
+                  <i class="fa fa-check-circle" aria-hidden="true"></i>
+                  <span class="alert-title">Success:</span>
+                  <span>Write your success message</span>
+                  <span class="alert-close" aria-hidden="true">&times;</span>
+                </div>
+                <div class="alert-info">
+                  <i class="fa fa-info-circle" aria-hidden="true"></i>
+                  <span class="alert-title">Info:</span>
+                  <span>Write your info message</span>
+                  <span class="alert-close" aria-hidden="true">&times;</span>
+                </div>
+                <div class="alert-warning">
+                  <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                  <span class="alert-title">Warning:</span>
+                  <span>Write your warning message</span>
+                  <span class="alert-close" aria-hidden="true">&times;</span>
+                </div>
+                <div class="alert-error">
+                  <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                  <span class="alert-title">Error:</span>
+                  <span>Write your error message</span>
+                  <span class="alert-close" aria-hidden="true">&times;</span>
+                </div>
+              </div>
+              <script
+                type="text/plain"
+                class="line-numbers language-html snippet-container">
+                <!-- Success Alert -->
+                <div class="alert-success">
+                  <i class="fa fa-check-circle" aria-hidden="true"></i>
+                  <span class="alert-title">Success:</span>
+                  <span>Write your success message</span>
+                  <span class="alert-close" aria-hidden="true">&times;</span>
+                </div>
+
+                <!-- Info Alert -->
+                <div class="alert-info">
+                  <i class="fa fa-info-circle" aria-hidden="true"></i>
+                  <span class="alert-title">Info:</span>
+                  <span>Write your info message</span>
+                  <span class="alert-close" aria-hidden="true">&times;</span>
+                </div>
+
+                <!-- Warning Alert -->
+                <div class="alert-warning">
+                  <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                  <span class="alert-title">Warning:</span>
+                  <span>Write your warning message</span>
+                  <span class="alert-close" aria-hidden="true">&times;</span>
+                </div>
+
+                <!-- Error Alert -->
+                <div class="alert-error">
+                  <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                  <span class="alert-title">Error:</span>
+                  <span>Write your error message</span>
+                  <span class="alert-close" aria-hidden="true">&times;</span>
+                </div>
+              </script>
+            </div>
+
+            <h3 class="component-subheader">Outline Alerts</h3>
+            <div class="component-container">
+              <div class="alert-group">
+                <div class="outline-alert-success">
+                  <i class="fa fa-check-circle" aria-hidden="true"></i>
+                  <span class="alert-title">Success:</span>
+                  <span>Write your success message</span>
+                  <span class="alert-close" aria-hidden="true">&times;</span>
+                </div>
+
+                <div class="outline-alert-info">
+                  <i class="fa fa-info-circle" aria-hidden="true"></i>
+                  <span class="alert-title">Info:</span>
+                  <span>Write your info message</span>
+                  <span class="alert-close" aria-hidden="true">&times;</span>
+                </div>
+                <div class="outline-alert-warning">
+                  <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                  <span class="alert-title">Warning:</span>
+                  <span>Write your warning message</span>
+                  <span class="alert-close" aria-hidden="true">&times;</span>
+                </div>
+
+                <div class="outline-alert-error">
+                  <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                  <span class="alert-title">Error:</span>
+                  <span>Write your error message</span>
+                  <span class="alert-close" aria-hidden="true">&times;</span>
+                </div>
+              </div>
+              <script
+                type="text/plain"
+                class="line-numbers language-html snippet-container">
+                <!-- Outline Success Alert -->
+                <div class="outline-alert-success">
+                  <i class="fa fa-check-circle" aria-hidden="true"></i>
+                  <span class="alert-title">Success:</span>
+                  <span>Write your success message</span>
+                  <span class="alert-close" aria-hidden="true">&times;</span>
+                </div>
+
+                <!-- Outline Info Alert -->
+                <div class="outline-alert-info">
+                  <i class="fa fa-info-circle" aria-hidden="true"></i>
+                  <span class="alert-title">Info:</span>
+                  <span>Write your info message</span>
+                  <span class="alert-close" aria-hidden="true">&times;</span>
+                </div>
+
+                <!-- Outline Warning Alert -->
+                <div class="outline-alert-warning">
+                  <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                  <span class="alert-title">Warning:</span>
+                  <span>Write your warning message</span>
+                  <span class="alert-close" aria-hidden="true">&times;</span>
+                </div>
+
+                <!-- Outline Error Alert -->
+                <div class="outline-alert-error">
+                  <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                  <span class="alert-title">Error:</span>
+                  <span>Write your error message</span>
+                  <span class="alert-close" aria-hidden="true">&times;</span>
+                </div>
+              </script>
+            </div>
+          </section>
+          <!-- Avatar -->
+          <section id="avatars">
+            <h2 class="component-header">Avatars</h2>
+            <p class="component-description">
+              An avatar is an image or a graphic associated with your username.
+              Avatars are also used on social media profiles like Facebook,
+              Twitter and Instagram. Avatars are great for differentiating
+              yourself from everyone else.
+            </p>
+            <div class="component-container">
+              <div class="avatar-group">
+                <div class="avatar-xs">
+                  <img
+                    loading="lazy"
+                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+                    alt="avatar extra small" />
+                </div>
+                <div class="avatar-sm">
+                  <img
+                    loading="lazy"
+                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+                    alt="avatar small" />
+                </div>
+                <div class="avatar-md">
+                  <img
+                    loading="lazy"
+                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+                    alt="avatar medium" />
+                </div>
+                <div class="avatar-lg">
+                  <img
+                    loading="lazy"
+                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+                    alt="avatar large" />
+                </div>
+              </div>
+              <script
+                type="text/plain"
+                class="line-numbers language-html snippet-container">
+                <!-- Avatar extra small -->
+                <div class="avatar-xs">
+                  <img loading="lazy" src="..." alt="avatar extra small" />
+                </div>
+                <!-- Avatar Small -->
+                <div class="avatar-sm">
+                  <img loading="lazy" src="..." alt="avatar small" />
+                </div>
+                <!-- Avatar Medium -->
+                <div class="avatar-md">
+                  <img loading="lazy" src="..." alt="avatar medium" />
+                </div>
+                <!-- Avatar Large -->
+                <div class="avatar-lg">
+                  <img loading="lazy" src="..." alt="avatar large" />
+                </div>
+              </script>
+            </div>
+          </section>
+          <!-- Buttons -->
+          <section id="buttons">
+            <h2 class="component-header">Buttons</h2>
+            <p class="component-description">
+              Buttons are a simple element of interactive design, used everyday
+              by people browsing the web. They are do a given action once the
+              user interacts with them.
+            </p>
+            <h3 class="component-subheader">Solid buttons</h3>
+            <div class="component-container">
+              <div class="button-group">
+                <button type="button" class="btn-primary">Primary</button>
+                <button type="button" class="btn-secondary">Secondary</button>
+                <button type="button" class="btn-success">Success</button>
+                <button type="button" class="btn-info">Info</button>
+                <button type="button" class="btn-warning">Warning</button>
+                <button type="button" class="btn-error">Error</button>
+                <button
+                  type="button"
+                  class="btn bg-pink-300 text-white hover-bg-pink-300">
+                  custom
+                </button>
+              </div>
+              <script
+                type="text/plain"
+                class="line-numbers language-html snippet-container">
+                <!-- Primary Button -->
+                <button type="button" class="btn-primary">Primary</button>
+
+                <!-- Secondary Button -->
+                <button type="button" class="btn-secondary">Secondary</button>
+
+                <!-- Success Button -->
+                <button type="button" class="btn-success">Success</button>
+
+                <!-- Info Button -->
+                <button type="button" class="btn-info">Info</button>
+
+                <!-- Warning Button -->
+                <button type="button" class="btn-warning">Warning</button>
+
+                <!-- Error Button -->
+                <button type="button" class="btn-error">Error</button>
+
+                <!-- Custom Button -->
+                <button type="button" class="btn bg-pink-300 text-white hover-bg-pink-300">
+                  Custom
+                </button>
+              </script>
+            </div>
+
+            <!-- Outline Buttons -->
+            <h3 class="component-subheader">Outline Buttons</h3>
+            <div class="component-container">
+              <div class="button-group">
+                <button type="button" class="btn-outline-primary">
+                  primary
+                </button>
+                <button type="button" class="btn-outline-secondary">
+                  secondary
+                </button>
+                <button type="button" class="btn-outline-success">
+                  success
+                </button>
+                <button type="button" class="btn-outline-info">info</button>
+                <button type="button" class="btn-outline-warning">
+                  warning
+                </button>
+                <button type="button" class="btn-outline-error">error</button>
+                <button
+                  type="button"
+                  class="btn btn-outline-pink-100 text-pink-300 hover-text-white hover-bg-pink-300">
+                  custom
+                </button>
+              </div>
+              <script
+                type="text/plain"
+                class="line-numbers language-html snippet-container">
+                <!-- Primary Outline Button -->
+                <button type="button" class="btn-outline-primary">Primary</button>
+
+                <!-- Secondary Outline Button -->
+                <button type="button" class="btn-outline-secondary">Secondary</button>
+
+                <!-- Success Outline Button -->
+                <button type="button" class="btn-outline-success">Success</button>
+
+                <!-- Info Outline Button -->
+                <button type="button" class="btn-outline-info">Info</button>
+
+                <!-- Warning Outline Button -->
+                <button type="button" class="btn-outline-warning">Warning</button>
+
+                <!-- Error Outline Button -->
+                <button type="button" class="btn-outline-error">Error</button>
+
+                <!-- Custom Outline Button -->
+                <button type="button" class="btn text-pink-300 hover-text-white hover-bg-pink-300">
+                  custom
+                </button>
+              </script>
+            </div>
+            <!-- Buttons with icons -->
+            <h3 class="component-subheader">Buttons with icons</h3>
+            <div class="component-container">
+              <div class="button-group">
+                <button
+                  type="button"
+                  class="btn-icon bg-blue-400 hover-bg-blue-400">
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                  Add to cart
+                </button>
+                <button
+                  type="button"
+                  class="btn-icon bg-green-500 hover-bg-green-500">
+                  <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                  send message
+                </button>
+              </div>
+              <script
+                type="text/plain"
+                class="line-numbers language-html snippet-container">
+                <!-- Add to cart Button -->
+                <button
+                  type="button"
+                  class="btn-icon bg-blue-400 hover-bg-blue-400">
+                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                  Add to cart
+                </button>
+
+                <!-- Send Message Button -->
+                <button
+                  type="button"
+                  class="btn-icon bg-green-500 hover-bg-green-500">
+                  <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                  send message
+                </button>
+              </script>
+            </div>
+          </section>
+          <!-- Card -->
+          <section id="cards">
+            <h2 class="component-header">Cards</h2>
+            <p class="component-description">
+              A card is container for a few short, related pieces of
+              information. It roughly resembles a playing card in size and
+              shape, and is intended as a linked, short representation of a
+              conceptual unit.
+            </p>
+            <!-- Normal Card -->
+            <h3 class="component-subheader">Normal Card</h3>
+            <div class="component-container">
+              <div class="card-group">
+                <div class="card">
+                  <div class="card-body">
+                    <h2 class="card-title">This is card title</h2>
+                    <div class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Repellendus accusantium et illum eum optio quae?
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <script
+                type="text/plain"
+                class="line-numbers language-html snippet-container">
+                <!-- Normal Card -->
+                <div class="card">
+                  <div class="card-body">
+                    <h2 class="card-title">This is card title</h2>
+                    <div class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Repellendus accusantium et illum eum optio quae?
+                    </div>
+                  </div>
+                </div>
+              </script>
+            </div>
+            <!-- Horizontal Card -->
+            <h3 class="component-subheader">Horizontal Card</h3>
+            <div class="component-container">
+              <div class="card-group">
+                <div class="card-horizontal">
+                  <img
+                    class="card-image"
+                    src="http://placekitten.com/200/300"
+                    alt="kitten" />
+                  <div class="card-body">
+                    <h2 class="card-title">This is card title</h2>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Numquam debitis aspernatur est exercitationem fugit
+                      delectus voluptas dolorum ipsam vero dolore non eos
+                      eveniet rerum
+                    </p>
+                    <a class="card-button" href="#">Read more</a>
+                  </div>
+                </div>
+              </div>
+              <script
+                type="text/plain"
+                class="line-numbers language-html snippet-container">
+                <!-- Horizontal Card -->
+                <div class="card-horizontal">
+                  <img
+                    class="card-image"
+                    src="..."
+                    alt="alt-text" />
+                  <div class="card-body">
+                    <h2 class="card-title">This is card title</h2>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Numquam debitis aspernatur est exercitationem fugit
+                      delectus voluptas dolorum ipsam vero dolore non eos
+                      eveniet rerum
+                    </p>
+                    <a class="card-button" href="#">Read more</a>
+                  </div>
+                </div>
+              </script>
+            </div>
+            <!-- Vertical Card -->
+            <h3 class="component-subheader">Vertical Card</h3>
+            <div class="component-container">
+              <div class="card-group">
+                <div class="card">
+                  <img
+                    class="card-image"
+                    src="http://placekitten.com/200/300"
+                    alt="kitten" />
+                  <div class="card-body">
+                    <h2 class="card-title">This is card title</h2>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Repellendus accusantium et illum eum optio quae?
+                    </p>
+                    <a class="card-button" href="#">Read more</a>
+                  </div>
+                </div>
+              </div>
+              <script
+                type="text/plain"
+                class="line-numbers language-html snippet-container">
+                <!-- Vertical Card -->
+                <div class="card">
+                  <img
+                    class="card-image"
+                    src="..."
+                    alt="alt-text" />
+                  <div class="card-body">
+                    <h2 class="card-title">This is card title</h2>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Repellendus accusantium et illum eum optio quae?
+                    </p>
+                    <a class="card-button" href="#">Read more</a>
+                  </div>
+                </div>
+              </script>
+            </div>
+            <!-- Testimonial Card -->
+            <h3 class="component-subheader">Testimonial Card</h3>
+            <div class="component-container">
+              <div class="card-group">
+                <div class="testimonial">
+                  <img
+                    class="testimonial-image"
+                    src="https://images.unsplash.com/photo-1549836938-d278c5d46d20?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=303&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=303"
+                    alt="avatar" />
+                  <div class="body">
+                    <h2 class="title">John Doe</h2>
+                    <h3 class="subtitle">Project Manager</h3>
+                    <p class="text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      At possimus, necessitatibus maiores dicta quasi, quou
+                      liquid nost
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <script
+                type="text/plain"
+                class="line-numbers language-html snippet-container">
+                <!-- Testimonial Card -->
+                <div class="testimonial">
+                  <img
+                    class="testimonial-image"
+                    src="..."
+                    alt="avatar" />
+                  <div class="body">
+                    <h2 class="title">John Doe</h2>
+                    <h3 class="subtitle">Project Manager</h3>
+                    <p class="text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      At possimus, necessitatibus maiores dicta quasi, quou
+                      liquid nost
+                    </p>
+                  </div>
+                </div>
+              </script>
+            </div>
+          </section>
+
+          <section id="images">
+            <h2 class="component-header">Image</h2>
+            <p class="component-description">
+              Images component helps you to display an image on to the screen.
+            </p>
+            <h3 class="component-subheader">Rounded Image</h3>
+            <div class="component-container">
+              <div class="image-group">
+                <img
+                  class="img-lg-round"
+                  src="https://images.unsplash.com/reserve/bOvf94dPRxWu0u3QsPjF_tree.jpg?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80"
+                  alt="nature" />
+              </div>
+              <script
+                type="text/plain"
+                class="line-numbers language-html snippet-container">
+                <!-- 32x32 -->
+                <img class="img-xs-round" src="..." alt="nature" />
+                <!-- 64x64 -->
+                <img class="img-sm-round" src="..." alt="nature" />
+                <!-- 100x100 -->
+                <img class="img-md-round" src="..." alt="nature" />
+                <!-- 160x160 -->
+                <img class="img-lg-round" src="..." alt="nature" />
+                <!-- 256x256 -->
+                <img class="img-xl-round" src="..." alt="nature" />
+                <!-- 400x400 -->
+                <img class="img-xxl-round" src="..." alt="nature" />
+              </script>
+            </div>
+
+            <h3 class="component-subheader">Square Image</h3>
+            <div class="component-container">
+              <div class="image-group">
+                <img
+                  class="img-lg"
+                  src="https://images.unsplash.com/reserve/bOvf94dPRxWu0u3QsPjF_tree.jpg?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=876&q=80"
+                  alt="nature" />
+              </div>
+              <script
+                type="text/plain"
+                class="line-numbers language-html snippet-container">
+                <!-- 32x32 -->
+                <img class="img-xs" src="..." alt="nature" />
+                <!-- 64x64 -->
+                <img class="img-sm" src="..." alt="nature" />
+                <!-- 100x100 -->
+                <img class="img-md" src="..." alt="nature" />
+                <!-- 160x160 -->
+                <img class="img-lg" src="..." alt="nature" />
+                <!-- 256x256 -->
+                <img class="img-xl" src="..." alt="nature" />
+                <!-- 400x400 -->
+                <img class="img-xxl" src="..." alt="nature" />
+              </script>
+            </div>
+          </section>
+          <!-- Input -->
+          <section id="inputs">
+            <h2 class="component-header">Input</h2>
+            <p class="component-description">
+              Input component helps to take information and later these
+              information can be used in further operations.
+            </p>
+            <h3 class="component-subheader">Text Input</h3>
+            <div class="component-container">
+              <div class="input-group">
+                <div class="input-container">
+                  <label class="input-label" for="text">Text</label>
+                  <i class="icon fa fa-user" aria-hidden="true"></i>
+                  <input
+                    class="input-text"
+                    type="text"
+                    id="text"
+                    placeholder="Enter your text" />
+                </div>
+              </div>
+              <script
+                type="text/plain"
+                class="line-numbers language-html snippet-container">
+                <!-- Text Input -->
+                <div class="input-group">
+                  <label class="input-label" for="text">Text</label>
+                  <i class="icon fa fa-user" aria-hidden="true"></i>
+                  <input
+                    class="input-text"
+                    type="text"
+                    id="text"
+                    placeholder="Enter your text" />
+                </div>
+              </script>
+            </div>
+            <h3 class="component-subheader">Email Input</h3>
+            <div class="component-container">
+              <div class="input-group">
+                <div class="input-container">
+                  <label class="input-label" for="email">Email Address</label>
+                  <i class="icon fa fa-envelope" aria-hidden="true"></i>
+                  <input
+                    class="input-email"
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email" />
+                </div>
+              </div>
+              <script
+                type="text/plain"
+                class="line-numbers language-html snippet-container">
+                <!-- Email Input -->
+                <div class="input-group">
+                  <label class="input-label" for="email">Email Address</label>
+                  <i class="icon fa fa-envelope" aria-hidden="true"></i>
+                  <input
+                    class="input-email"
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email" />
+                </div>
+              </script>
+            </div>
+            <h3 class="component-subheader">Password Input</h3>
+            <div class="component-container">
+              <div class="input-group">
+                <div class="input-container">
+                  <label class="input-label" for="password">Password</label>
+                  <i class="icon fa fa-eye" aria-hidden="true"></i>
+                  <input
+                    class="input-password"
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password" />
+                </div>
+              </div>
+              <script
+                type="text/plain"
+                class="line-numbers language-html snippet-container">
+                  <!-- Password Input -->
+                <div class="input-group">
+                  <label class="input-label" for="password">Password</label>
+                  <i class="icon fa fa-eye" aria-hidden="true"></i>
+                  <input
+                    class="input-password"
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password" />
+                </div>
+              </script>
+            </div>
+            <h3 class="component-subheader">Number Input</h3>
+            <div class="component-container">
+              <div class="input-group">
+                <div class="input-container">
+                  <label class="input-label" for="number">Phone</label>
+                  <input
+                    class="input-number"
+                    type="number"
+                    id="number"
+                    placeholder="Enter your phone number" />
+                </div>
+              </div>
+              <script
+                type="text/plain"
+                class="line-numbers language-html snippet-container">
+                <!-- Number Input -->
+                <div class="input-group">
+                  <label class="input-label" for="number">Phone</label>
+                  <input
+                    class="input-number"
+                    type="number"
+                    id="number"
+                    placeholder="Enter your phone number" />
+                </div>
+              </script>
+            </div>
+            <h3 class="component-subheader">Checkbox Input</h3>
+            <div class="component-container">
+              <div class="input-group">
+                <div class="input-container">
+                  <div class="checkbox-group">
+                    <input
+                      class="input-checkbox"
+                      type="checkbox"
+                      id="check-html"
+                      value="checkbox" />
+                    <label for="check-html">HTML</label>
+                  </div>
+                </div>
+                <div class="checkbox-group">
+                  <input
+                    class="input-checkbox"
+                    type="checkbox"
+                    id="check-css"
+                    value="checkbox" />
+                  <label for="check-css">CSS</label>
+                </div>
+                <div class="checkbox-group">
+                  <input
+                    class="input-checkbox"
+                    type="checkbox"
+                    id="check-js"
+                    value="checkbox" />
+                  <label for="check-js">JavaScript</label>
+                </div>
+              </div>
+              <script
+                type="text/plain"
+                class="line-numbers language-html snippet-container">
+                <!-- Checkbox Input -->
+                <div class="input-group">
+                  <div class="checkbox-group">
+                    <input
+                      class="input-checkbox"
+                      type="checkbox"
+                      id="check-html"
+                      value="checkbox" />
+                    <label for="check-html">HTML</label>
+                  </div>
+                  <div class="checkbox-group">
+                    <input
+                      class="input-checkbox"
+                      type="checkbox"
+                      id="css"
+                      value="checkbox" />
+                    <label for="check-css">CSS</label>
+                  </div>
+                  <div class="checkbox-group">
+                    <input
+                      class="input-checkbox"
+                      type="checkbox"
+                      id="check-js"
+                      value="checkbox" />
+                    <label for="check-js">JavaScript</label>
+                  </div>
+                </div>
+              </script>
+            </div>
+            <h3 class="component-subheader">Radio Input</h3>
+            <div class="component-container">
+              <div class="input-group">
+                <div class="input-container">
+                  <div class="radio-group">
+                    <input
+                      class="input-checkbox"
+                      type="radio"
+                      id="radio-html"
+                      name="web"
+                      value="checkbox" />
+                    <label for="radio-html">HTML</label>
+                  </div>
+                  <div class="radio-group">
+                    <input
+                      class="input-checkbox"
+                      type="radio"
+                      name="web"
+                      id="radio-css"
+                      value="checkbox" />
+                    <label for="radio-css">CSS</label>
+                  </div>
+                  <div class="radio-group">
+                    <input
+                      class="input-checkbox"
+                      type="radio"
+                      name="web"
+                      id="radio-js"
+                      value="checkbox" />
+                    <label for="radio-js">JavaScript</label>
+                  </div>
+                </div>
+              </div>
+              <script
+                type="text/plain"
+                class="line-numbers language-html snippet-container">
+                <!-- Text Input -->
+                <div class="input-group">
+                  <div class="checkbox-group">
+                    <input
+                      class="input-checkbox"
+                      type="radio"
+                      id="radio-html"
+                      name="web"
+                      value="checkbox" />
+                    <label for="radio-html">HTML</label>
+                  </div>
+                  <div class="checkbox-group">
+                    <input
+                      class="input-checkbox"
+                      type="radio"
+                      name="web"
+                      id="radio-css"
+                      value="checkbox" />
+                    <label for="radio-css">CSS</label>
+                  </div>
+                  <div class="checkbox-group">
+                    <input
+                      class="input-checkbox"
+                      type="radio"
+                      name="web"
+                      id="radio-js"
+                      value="checkbox" />
+                    <label for="radio-js">JavaScript</label>
+                  </div>
+                </div>
+              </script>
+            </div>
+            <h3 class="component-subheader">Slider Input</h3>
+            <div class="component-container">
+              <div class="input-group">
+                <div class="input-container">
+                  <input
+                    class="input-range"
+                    type="range"
+                    min="0"
+                    max="100"
+                    step="1"
+                    value="10"
+                    oninput="output.value = this.value" />
+                  <output id="output">10</output>
+                </div>
+              </div>
+              <script
+                type="text/plain"
+                class="line-numbers language-html snippet-container">
+                <!-- Slider Input -->
+                <div class="input-group">
+                  <input
+                    class="input-range"
+                    type="range"
+                    min="0"
+                    max="100"
+                    step="1"
+                    value="10"
+                    oninput="output.value = this.value" />
+                  <output id="output">10</output>
+                </div>
+              </script>
+            </div>
+          </section>
+          <!-- Input -->
+          <section id="dropdown">
+            <h2 class="component-header">Dropdown</h2>
+            <p class="component-description">
+              A dropdown helps to select the values from the series of different
+              options.
+            </p>
+            <h3 class="component-subheader">DropDown on Click</h3>
+            <div class="component-container">
+              <div class="input-group">
+                <div class="dropdown">
+                  <button class="dropdown-button">
+                    Dropdown
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                  </div>
+                </div>
+              </div>
+              <script
+                type="text/plain"
+                class="line-numbers language-html snippet-container">
+                <!-- DropDown Menu Click -->
+                <div class="dropdown">
+                  <button class="dropdown-button">
+                    Dropdown
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                  </div>
+                </div>
+              </script>
+            </div>
+
+            <h3 class="component-subheader">DropDown on Hover</h3>
+            <div class="component-container">
+              <div class="input-group">
+                <div class="dropdown">
+                  <button class="dropdown-button">
+                    Dropdown
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content-hover">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                  </div>
+                </div>
+              </div>
+              <script
+                type="text/plain"
+                class="line-numbers language-html snippet-container">
+                <!-- DropDown Menu Hover -->
+                <div class="dropdown">
+                  <button class="dropdown-button">
+                    Dropdown
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content-hover">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                  </div>
+                </div>
+              </script>
+            </div>
+          </section>
+
+          <!-- Color -->
+          <section id="colors">
+            <h2 class="component-header">Colors</h2>
+            <p class="component-description">
+              Color paletes helps to make the webpages colorful and visually
+              pleasing to the eyes.
+            </p>
+            <h3 class="component-subheader">Base</h3>
+            <div class="component-container">
+              <!-- Base color -->
+              <div class="color-group">
+                <div class="color-box">
+                  <div class="box bg-primary"></div>
+                  <p class="text-center text-sm">Primary</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-secondary"></div>
+                  <p class="text-center text-sm">Secondary</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-success"></div>
+                  <p class="text-center text-sm">Success</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-info"></div>
+                  <p class="text-center text-sm">Info</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-warning"></div>
+                  <p class="text-center text-sm">Warning</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-error"></div>
+                  <p class="text-center text-sm">Error</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-white"></div>
+                  <p class="text-center text-sm">White</p>
+                </div>
+
+                <div class="color-box">
+                  <div class="box bg-black"></div>
+                  <p class="text-center text-sm">Black</p>
+                </div>
+              </div>
+            </div>
+            <h3 class="component-subheader">Blue</h3>
+            <div class="component-container">
+              <!-- Blue color -->
+              <div class="color-group">
+                <div class="color-box">
+                  <div class="box bg-blue-100"></div>
+                  <p class="text-center text-sm">100: #cceaff</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-blue-200"></div>
+                  <p class="text-center text-sm">200: #b3dfff</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-blue-300"></div>
+                  <p class="text-center text-sm">300: #99d5ff</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-blue-400"></div>
+                  <p class="text-center text-sm">400: #80caff</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-blue-500"></div>
+                  <p class="text-center text-sm">500: #66bfff</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-blue-600"></div>
+                  <p class="text-center text-sm">600: #33aaff</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-blue-700"></div>
+                  <p class="text-center text-sm">700: #33aaff</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-blue-800"></div>
+                  <p class="text-center text-sm">800: #1a9fff</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-blue-900"></div>
+                  <p class="text-center text-sm">900: #0095ff</p>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="component-subheader">Green</h3>
+            <div class="component-container">
+              <!-- Green color -->
+              <div class="color-group">
+                <div class="color-box">
+                  <div class="box bg-green-100"></div>
+                  <p class="text-center text-sm">100: #84f273</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-green-200"></div>
+                  <p class="text-center text-sm">200: #6ff05c</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-green-300"></div>
+                  <p class="text-center text-sm">300: #5bee44</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-green-400"></div>
+                  <p class="text-center text-sm">400: #46eb2d</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-green-500"></div>
+                  <p class="text-center text-sm">500: #32e916</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-green-600"></div>
+                  <p class="text-center text-sm">600: #2dd214</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-green-700"></div>
+                  <p class="text-center text-sm">700: #28bb11</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-green-800"></div>
+                  <p class="text-center text-sm">800: #23a30f</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-green-900"></div>
+                  <p class="text-center text-sm">900: #1e8c0d</p>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="component-subheader">Red</h3>
+            <div class="component-container">
+              <!-- Red color -->
+              <div class="color-group">
+                <div class="color-box">
+                  <div class="box bg-red-100"></div>
+                  <p class="text-center text-sm">100: #ffccd0</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-red-200"></div>
+                  <p class="text-center text-sm">200: #ffb3b9</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-red-300"></div>
+                  <p class="text-center text-sm">300: #ff99a2</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-red-400"></div>
+                  <p class="text-center text-sm">400: #ff808a</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-red-500"></div>
+                  <p class="text-center text-sm">500: #ff6673</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-red-600"></div>
+                  <p class="text-center text-sm">600: #ff4d5b</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-red-700"></div>
+                  <p class="text-center text-sm">700: #ff3344</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-red-800"></div>
+                  <p class="text-center text-sm">800: #ff1a2d</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-red-900"></div>
+                  <p class="text-center text-sm">900: #ff0015</p>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="component-subheader">Pink</h3>
+            <div class="component-container">
+              <!-- Pink color -->
+              <div class="color-group">
+                <div class="color-box">
+                  <div class="box bg-pink-100"></div>
+                  <p class="text-center text-sm">100: #ffcce6</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-pink-200"></div>
+                  <p class="text-center text-sm">200: #ffb3d9</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-pink-300"></div>
+                  <p class="text-center text-sm">300: #ff99cc</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-pink-400"></div>
+                  <p class="text-center text-sm">400: #ff80bf</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-pink-500"></div>
+                  <p class="text-center text-sm">500: #ff66b3</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-pink-600"></div>
+                  <p class="text-center text-sm">600: #ff4da6</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-pink-700"></div>
+                  <p class="text-center text-sm">700: #ff3399</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-pink-800"></div>
+                  <p class="text-center text-sm">800: #ff1a8c</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-pink-900"></div>
+                  <p class="text-center text-sm">900: #ff0080</p>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="component-subheader">Gray</h3>
+            <div class="component-container">
+              <!-- Gray color -->
+              <div class="color-group">
+                <div class="color-box">
+                  <div class="box bg-gray-100"></div>
+                  <p class="text-center text-sm">100: #e1e6ea</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-gray-200"></div>
+                  <p class="text-center text-sm">200: #d3d9df</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-gray-300"></div>
+                  <p class="text-center text-sm">300: #c4ccd4</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-gray-400"></div>
+                  <p class="text-center text-sm">400: #b5bfc9</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-gray-500"></div>
+                  <p class="text-center text-sm">500: #a6b3bf</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-gray-600"></div>
+                  <p class="text-center text-sm">600: #a6b3bf</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-gray-700"></div>
+                  <p class="text-center text-sm">700: #8999a9</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-gray-800"></div>
+                  <p class="text-center text-sm">800: #b5bfc9</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-gray-900"></div>
+                  <p class="text-center text-sm">900: #c4ccd4</p>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="component-subheader">Yellow</h3>
+            <div class="component-container">
+              <!-- Yellow color -->
+              <div class="color-group">
+                <div class="color-box">
+                  <div class="box bg-yellow-100"></div>
+                  <p class="text-center text-sm">100: #fff7cc</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-yellow-200"></div>
+                  <p class="text-center text-sm">200: #ffc499</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-yellow-300"></div>
+                  <p class="text-center text-sm">300: #ffea80</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-yellow-400"></div>
+                  <p class="text-center text-sm">400: #ffea80</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-yellow-500"></div>
+                  <p class="text-center text-sm">500: #ffe666</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-yellow-600"></div>
+                  <p class="text-center text-sm">600: #ffe14d</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-yellow-700"></div>
+                  <p class="text-center text-sm">700: #ffdd33</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-yellow-800"></div>
+                  <p class="text-center text-sm">800: #ffd91a</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-yellow-900"></div>
+                  <p class="text-center text-sm">900: #ffd500</p>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="component-subheader">Orange</h3>
+            <div class="component-container">
+              <!-- Orange color -->
+              <div class="color-group">
+                <div class="color-box">
+                  <div class="box bg-orange-100"></div>
+                  <p class="text-center text-sm">100: #ffd2b3</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-orange-200"></div>
+                  <p class="text-center text-sm">200: #ffc499</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-orange-300"></div>
+                  <p class="text-center text-sm">300: #ffb580</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-orange-400"></div>
+                  <p class="text-center text-sm">400: #ffa666</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-orange-500"></div>
+                  <p class="text-center text-sm">500: #ff974d</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-orange-600"></div>
+                  <p class="text-center text-sm">600: #ff8833</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-orange-700"></div>
+                  <p class="text-center text-sm">700: #ff791a</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-orange-800"></div>
+                  <p class="text-center text-sm">800: #ff6a00</p>
+                </div>
+                <div class="color-box">
+                  <div class="box bg-orange-900"></div>
+                  <p class="text-center text-sm">900: #e66000</p>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="component-subheader">Background Color on Hover</h3>
+            <p class="component-description text-black">
+              Utilities to add background color to the element on hover. Use the
+              class
+              <code class="syntax">hover-bg-{color}-{shade}</code>
+            </p>
+            <div class="component-container">
+              <div class="input-group">
+                <div class="color-group">
+                  <div class="bg-red-400 hover-bg-red-400 color-box"></div>
+                  <div class="bg-warning hover-bg-warning color-box"></div>
+                </div>
+              </div>
+              <script
+                type="text/plain"
+                class="line-numbers language-html snippet-container">
+                <div class="bg-red-400 hover-bg-red-400">Hover Background Red 400 </div>
+                <div class="bg-warning hover-bg-warning">Hover Background Warning</div>
+              </script>
+            </div>
+
+            <h3 class="component-subheader">Background Color</h3>
+            <p class="component-description text-black">
+              Utilities to add background color to the element. Use the class
+              <code class="syntax">bg-{color}-{shade}</code>
+            </p>
+            <div class="component-container">
+              <div class="input-group">
+                <div class="color-group">
+                  <div class="bg-red-400 color-box"></div>
+                  <div class="bg-warning color-box"></div>
+                </div>
+              </div>
+              <script
+                type="text/plain"
+                class="line-numbers language-html snippet-container">
+                <div class="bg-red-400">Background Red 400 </div>
+                <div class="bg-warning">Background Warning</div>
+              </script>
+            </div>
+
+            <h3 class="component-subheader">Text Color</h3>
+            <p class="component-description text-black">
+              Utilities to add text color to the element. Use the class
+              <code class="syntax">text-{color}-{shade}</code>
+            </p>
+            <div class="component-container">
+              <div class="input-group">
+                <div class="input-container">
+                  <div class="text-blue-400">Text blue Shade 400</div>
+                  <div class="text-success">Success Text Color</div>
+                </div>
+              </div>
+              <script
+                type="text/plain"
+                class="line-numbers language-html snippet-container">
+                <div class="text-blue-400">Text blue Shade 400</div>
+                <div class="text-success">Success Text Color</div>
+              </script>
+            </div>
+          </section>
+
+          <!-- Typography -->
+          <section id="typography">
+            <h2 class="component-header">Typography</h2>
+            <p class="component-description">
+              Typography component helps to arrange the texts in legible,
+              readable and appealing when displayed.
+            </p>
+            <h3 class="component-subheader">Font Size</h3>
+            <div class="component-container">
+              <div class="input-group">
+                <p class="text-xs">Extra small font</p>
+                <p class="text-sm">Small small font</p>
+                <p class="text-base">Base font</p>
+                <p class="text-md">Medium font</p>
+                <p class="text-lg">Large font</p>
+                <p class="text-xl">Extra Large font</p>
+                <p class="text-2xl">2 Extra Large font</p>
+                <p class="text-3xl">3 Extra Large font</p>
+                <p class="text-4xl">4 Extra Large font</p>
+              </div>
+              <script
+                type="text/plain"
+                class="line-numbers language-html snippet-container">
+                <p class="text-xs">Extra small font</p>
+                <p class="text-sm">Small small font</p>
+                <p class="text-base">Base font</p>
+                <p class="text-md">Medium font</p>
+                <p class="text-lg">Large font</p>
+                <p class="text-xl">Extra Large font</p>
+                <p class="text-2xl">2 Extra Large font</p>
+                <p class="text-3xl">3 Extra Large font</p>
+                <p class="text-4xl">4 Extra Large font</p>
+              </script>
+            </div>
+            <h3 class="component-subheader">Text Alignment</h3>
+            <div class="component-container">
+              <div class="input-group">
+                <p class="text-left">Text Align Left</p>
+                <p class="text-center">Text Align Center</p>
+                <p class="text-right">Text Align Right</p>
+              </div>
+              <script
+                type="text/plain"
+                class="line-numbers language-html snippet-container">
+                <p class="text-left">Text Align Left</p>
+                <p class="text-center">Text Align Center</p>
+                <p class="text-right">Text Align Right</p>
+              </script>
+            </div>
+          </section>
+        </article>
+      </section>
+    </main>
+
+    <script defer src="./prism/prism.js"></script>
+    <script defer src="../dist/docs.js"></script>
+    <script defer src="./docs.js"></script>
+  </body>
+</html>
