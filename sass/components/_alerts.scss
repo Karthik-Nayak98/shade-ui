@@ -1,71 +1,43 @@
 @use '../abstracts' as *;
 
-.alert {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+$alert_colors: (
+  'success': #29bf12,
+  'error': #e63946,
+  'info': #7fc8f8,
+  'warning': #f7bb15,
+);
+
+@mixin alert($bg-color, $fg-color, $border-color: transparent) {
+  margin: 0.5rem 0;
   border-radius: 4px;
+  font-size: 14px;
+  max-width: 350px;
   padding: 1rem;
-  .alert-title {
-    text-transform: uppercase;
-    font-weight: 600;
-  }
-  .alert-close {
-    color: #495057;
-    float: right;
-  }
+  background-color: $bg-color;
+  color: $fg-color;
+  border: 1.5px solid $border-color;
 }
 
-/* Success Alert */
-.success-alert-bg {
-  background-color: $success;
-  color: white;
-}
-
-.success-alert {
-  border: 1.5px solid $success;
-  border-left: 5px solid $success;
-  color: $success;
-  i {
-    color: $success;
+.alert-close {
+  float: right;
+  position: relative;
+  top: -8px;
+  color: #717171;
+  font-size: 1.4rem;
+  &:hover {
+    color: lighten(#717171, 30);
+    cursor: pointer;
   }
 }
 
-.info-alert-bg {
-  background-color: $info;
-  color: white;
-}
-
-.info-alert {
-  border: 1.5px solid $info;
-  border-left: 5px solid $info;
-  color: $info;
-  i {
-    color: $info;
+@each $color, $value in $alert_colors {
+  .alert-#{$color} {
+    @include alert($value, #fff);
   }
 }
 
-.warning-alert-bg {
-  background-color: $warning;
-  color: white;
-}
-.warning-alert {
-  border: 1.5px solid $warning;
-  border-left: 5px solid $warning;
-  color: $warning;
-  i {
-    color: $warning;
-  }
-}
-
-.error-alert-bg {
-  background-color: $error;
-  color: white;
-}
-.error-alert {
-  border: 1.5px solid $error;
-  border-left: 5px solid $error;
-  color: $error;
-  i {
-    color: $error;
+@each $color, $value in $alert_colors {
+  .outline-alert-#{$color} {
+    @include alert(transparent, $value, $value);
   }
 }

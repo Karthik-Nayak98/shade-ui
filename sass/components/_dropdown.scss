@@ -1,0 +1,58 @@
+@mixin dropdownButton() {
+  outline: none;
+  border: none;
+  padding: 0.3rem 0.5rem;
+  min-width: 125px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  gap: 10px;
+  cursor: pointer;
+}
+
+@mixin dropdownContent() {
+  display: none;
+  background-color: #dddddd;
+  margin: 0.1rem 0;
+  border-radius: 6px;
+  z-index: 10;
+}
+
+@mixin dropdownLink() {
+  a {
+    padding: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+    &:hover {
+      background-color: #efefef;
+    }
+  }
+}
+
+.dropdown {
+  position: relative;
+  max-width: 200px;
+  &:hover .dropdown-content-hover {
+    @include dropdownContent();
+    display: flex;
+    flex-direction: column;
+    @include dropdownLink();
+  }
+  .dropdown-content-hover {
+    display: none;
+  }
+  .dropdown-button {
+    @include dropdownButton();
+  }
+
+  .dropdown-content {
+    @include dropdownContent();
+    @include dropdownLink();
+  }
+
+  .show {
+    display: flex;
+    flex-direction: column;
+  }
+}

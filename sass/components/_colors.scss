@@ -1,0 +1,66 @@
+@use 'sass:math';
+@use 'abstracts' as *;
+
+$colors: (
+  'red': hsl(355, 100%, 90%),
+  'pink': hsl(330, 100%, 90%),
+  'gray': hsl(210, 16%, 90%),
+  'blue': hsl(205, 100%, 90%),
+  'yellow': hsl(50, 100%, 90%),
+  // 'green': hsl(135, 100%, 90%),
+  'green': hsl(112, 83%, 70%),
+  'orange': hsl(25, 100%, 85%),
+  'teal': hsl(112, 83%, 70%),
+);
+
+@each $color, $value in $colors {
+  @for $i from 0 through 8 {
+    $percentage: percentage(calc($i/100) * 5);
+    .text-#{$color}-#{($i + 1)*100} {
+      color: darken($value, $percentage);
+    }
+    .hover-text-#{$color} {
+      &:hover {
+        color: darken($value, 10);
+      }
+    }
+  }
+}
+
+@each $color, $value in $main_colors {
+  .text-#{$color} {
+    color: $value;
+  }
+  .bg-#{$color} {
+    background-color: $value;
+  }
+  .hover-bg-#{$color} {
+    &:hover {
+      background-color: darken($value, 10);
+    }
+  }
+}
+
+.text-white {
+  color: hsl(0, 0%, 94%);
+}
+.hover-text-white {
+  &:hover {
+    color: hsl(0, 0%, 94%);
+  }
+}
+
+@each $color, $value in $colors {
+  @for $i from 0 through 8 {
+    $percentage: percentage(calc($i/100) * 5);
+    .bg-#{$color}-#{($i + 1)*100} {
+      background-color: darken($value, $percentage);
+    }
+    .hover-bg-#{$color}-#{($i + 1)*100} {
+      &:hover {
+        background-color: lighten(darken($value, $percentage), 3);
+        opacity: 0.8;
+      }
+    }
+  }
+}

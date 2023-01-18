@@ -1,6 +1,7 @@
+@use 'colors' as *;
 @use '../abstracts' as *;
 
-.btn {
+@mixin default-btn() {
   padding: 0.6rem 0.75rem;
   cursor: pointer;
   border-radius: 4px;
@@ -10,81 +11,41 @@
   text-transform: uppercase;
 }
 
+@mixin btn($bg-color: #ececec) {
+  @include default-btn();
+  background-color: $bg-color;
+}
+
 /* Solid buttons */
-.btn-success {
-  background-color: $success;
-  color: white;
-  &:hover {
-    background-color: rgb(6, 158, 28);
-  }
-}
-
-.btn-warning {
-  background-color: $warning;
-  color: white;
-  &:hover {
-    background-color: #ddad29;
-  }
-}
-
-.btn-info {
-  background-color: $info;
-  color: white;
-  &:hover {
-    background-color: #1d72bc;
-  }
-}
-
-.btn-error {
-  background-color: $error;
-  color: white;
-  &:hover {
-    background-color: #ee1628;
+@each $prefix, $value in $main-colors {
+  .btn-#{$prefix} {
+    @include btn($value);
+    color: white;
+    &:hover {
+      background-color: lighten($value, 5);
+    }
   }
 }
 
 /* Outline buttons */
-.btn-outline-success {
-  background-color: transparent;
-  border: 1.5px solid $success;
-  color: $success;
-  &:hover {
-    background-color: $success;
-    color: white;
+@each $prefix, $value in $main-colors {
+  .btn-outline-#{$prefix} {
+    @include btn(transparent);
+    border: 1.5px solid $value;
+    color: $value;
+    &:hover {
+      background-color: lighten($value, 5);
+      color: white;
+    }
   }
 }
 
-.btn-outline-warning {
-  border: 1.5px solid $warning;
-  background-color: transparent;
-  color: $warning;
-  &:hover {
-    background-color: $warning;
-    color: white;
-  }
-}
-
-.btn-outline-info {
-  border: 1.5px solid $info;
-  background-color: transparent;
-  color: $info;
-  &:hover {
-    background-color: $info;
-    color: white;
-  }
-}
-
-.btn-outline-error {
-  border: 1.5px solid $error;
-  background-color: transparent;
-  color: $error;
-  &:hover {
-    background-color: $error;
-    color: white;
-  }
+.btn {
+  @include default-btn();
 }
 
 /* Buttons with icon */
 .btn-icon {
-  // background-color:
+  @include default-btn;
+  color: white;
 }

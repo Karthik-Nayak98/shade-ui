@@ -1,0 +1,42 @@
+@mixin input() {
+  letter-spacing: 1px;
+  padding: 0.6rem;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #626262;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-width: 100vw;
+  margin: 1rem 0px;
+
+  .icon {
+    top: 35px;
+    position: absolute;
+    right: 1%;
+  }
+}
+
+.input-label {
+  font-weight: 600;
+}
+
+.input-text,
+.input-password,
+.input-email,
+.input-number {
+  @include input;
+  &:focus {
+    border: 1.5px solid #26c5f3;
+    outline: none;
+  }
+}
+
+// .input-checkbox {
+//   display: flex;
+//   flex-direction: column;
+// }

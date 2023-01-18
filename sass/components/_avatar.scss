@@ -1,0 +1,20 @@
+$avatar-scale: (
+  'xs': 40px,
+  'sm': 50px,
+  'md': 75px,
+  'lg': 100px,
+);
+
+@mixin avatar($size) {
+  border-radius: 50%;
+  width: $size;
+  height: $size;
+}
+
+@each $prefix, $size in $avatar-scale {
+  .avatar-#{$prefix} {
+    img {
+      @include avatar($size);
+    }
+  }
+}
