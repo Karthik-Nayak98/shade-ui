@@ -49,6 +49,6 @@ Shade UI is a simple component library built using SASS. It contains different c
 
 ## 📝 License
 
-Copyright © 2021 [Karthik Nayak](https://github.com/karthik-nayak98).<br /> This
+Copyright © 2024 [Karthik Nayak](https://github.com/karthik-nayak98).<br /> This
 project is [MIT](https://github.com/Karthik-Nayak98/shade-ui/blob/main/LICENSE)
 licensed.
